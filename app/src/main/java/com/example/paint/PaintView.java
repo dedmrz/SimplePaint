@@ -160,6 +160,7 @@ public class PaintView extends View {
                 break;
             case MotionEvent.ACTION_MOVE:
                 touchMove(x, y);
+
                 invalidate();
                 break;
 
@@ -205,7 +206,7 @@ public class PaintView extends View {
 
         } else {
 
-            Toast.makeText(getContext(), "Нечего возвращать", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Нечего возвращатьs", Toast.LENGTH_LONG).show();
 
         }
 
@@ -247,7 +248,7 @@ public class PaintView extends View {
                 fileOutputStream.flush();
                 fileOutputStream.close();
 
-                Toast.makeText(getContext(), "saved", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Сохранено", Toast.LENGTH_LONG).show();
 
             } catch (FileNotFoundException e) {
 

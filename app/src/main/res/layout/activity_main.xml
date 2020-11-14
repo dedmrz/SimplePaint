@@ -4,61 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6A872"
     tools:context=".MainActivity">
 
     <com.example.paint.PaintView
         android:id="@+id/paintView"
         android:layout_width="0dp"
-        android:layout_height="526dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/change_color_button"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/style_menu"
         android:text="Сменить цвет"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paintView" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        style="@android:style/Widget.Material.SeekBar"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        android:max="500"
+        android:scrollbarSize="4dp"
+        android:soundEffectsEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/change_color_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paintView" />
+        app:tickMarkTint="#1028C5" />
 
     <TextView
         android:id="@+id/current_pen_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
         android:text="Толщина линии:"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#0915FA"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/change_color_button"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 </android.support.constraint.ConstraintLayout>

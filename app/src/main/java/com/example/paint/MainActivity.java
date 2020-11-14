@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         SeekBar seekBar = findViewById(R.id.seekBar); //слайдер для размера линии
         final TextView textView = findViewById(R.id.current_pen_size); //текстовое поле для отображения ширины линии
 
+
+
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics); //получение размеров экрана
 
         paintView.initialise(displayMetrics);
@@ -194,7 +196,9 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        ambilWarnaDialog.show(); // отображение окна 
+        ambilWarnaDialog.show(); // отображение окна
+        ambilWarnaDialog.show(); // отображение окна
 
     }
+
 }
